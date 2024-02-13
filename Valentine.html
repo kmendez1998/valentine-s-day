@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="./Estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi Valentín?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <img src="./Rosita.png" alt="No disponible" height="600">
+
+     <script>function descargarArchivo() {
+        // Simplemente redireccionamos a un archivo para descargar
+        window.location.href = 'archivo-declaracion.txt';
+    }
+    function reproducirAudio() {
+    var audio = new Audio('sanctuary.mp3');
+    audio.play();
+}
+    
+    function moverBoton() {
+    var btnNo = document.getElementById('btnNo');
+    var randomX = Math.floor(Math.random() * (window.innerWidth - 100)); // Posición X aleatoria
+    var randomY = Math.floor(Math.random() * (window.innerHeight - 50)); // Posición Y aleatoria
+    btnNo.style.position = 'absolute';
+    btnNo.style.left = randomX + 'px';
+    btnNo.style.top = randomY + 'px';
+}
+    </script>
+
+    <div class="container">
+        <h1>¿Quieres ser mi Valentín?</h1>
+        <a href="./plantilla-powerpoint-hello-kitty.pptx" download="plantilla-powerpoint-hello-kitty"><button id="btnSi" onclick="descargarArchivo(); reproducirAudio()">Sí</button></a>
+        <button id="btnNo" onclick="moverBoton()">No</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
